@@ -1,0 +1,417 @@
+@font-face {
+    font-family: "Kitty";
+    src: url(../fonts/hello-kitty.ttf);
+}
+@font-face {
+    font-family: "Simbo";
+    src: url(../fonts/simbolos-teclado.otf);
+}
+@font-face {
+    font-family: "Kitty1";
+    src: url(../fonts/JandaHappyDay.ttf);
+}
+@keyframes gira {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes flotar{
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1.5);
+        opacity: 0;
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+}
+.primero{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.segundo{
+    font-size: 3rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.segundo.active{
+    opacity: 1;
+}
+.primero.hidden {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+}
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.principal{
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out;
+    background-color: rgb(255, 182, 218);
+    color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main.visible{
+    opacity: 1;
+}
+.kittys{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+.corazon{
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    opacity: 0.7;
+    animation: flotar 5s linear infinite;
+}
+.primer, .segun, .tercer, .cuarter, .quinter, .sexting{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transform: translateX(100%);
+    opacity: 0;
+}
+.primer.active, .segun.active, .tercer.active,  .cuarter.active, .quinter.active, .sexting.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+.primer.prev, .segun.prev, .tercer.prev, .cuarter.prev, .quinter.prev, .sexting.prev{
+    transform: translateX(-100%);
+}
+.primer{
+    width: 1500px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 2;
+}
+.primer h1{
+    font-family: "Kitty1";
+    font-size: 60px;
+    color: deeppink;
+}
+.primer img{
+    width: 300px;
+
+}
+.primer h2{
+    font-family: "Kitty";
+    font-size: 30px;
+    color: hotpink;
+}
+.primer p{
+    font-family: "Simbo";
+    color: darkmagenta;
+    font-size: 45px;
+}
+.centrado1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.siguiente{
+    border: none;
+    background: none;
+    background-color: hotpink;
+    color: white;
+    padding: 15px 15px;
+    font-size: 30px;
+    font-family: "Kitty1";
+    border-radius: 10px;
+    box-shadow: 6px 10px 6px rgba(255, 72, 222, 0.714);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+.siguiente:hover{
+    transform: scale(0.9);
+    box-shadow: 6px 10px 6px rgba(255, 72, 222, 0.44);
+    color: black;
+}
+.centrado1 p{
+    font-family: "Kitty";
+    font-size: 30px;
+}
+.segun, .tercer {
+    display: none;
+}
+.segun{
+    width: 1500px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 2;
+}
+.centrado2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.segun h2{
+    font-family: "Kitty";
+    font-size: 60px;
+    color: deeppink;
+}
+.imagenes{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    justify-items: center;
+    gap: 50px;
+    background-color: rebeccapurple;
+}
+.memo{
+    width: 300px;
+    height: 330px;
+    background-color: white;
+    position: relative;
+}
+.memo1{
+    transform: rotate(2deg);
+}
+.memo2{
+    transform: rotate(-4deg);
+}
+.memo3{
+    transform: rotate(6deg);
+}
+.memo4{
+    transform: rotate(-8deg);
+}
+.memo5{
+    transform: rotate(10deg);
+}
+.memo6{
+    transform: rotate(-12deg);
+}
+
+.memo img{
+    width: 260px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.botones{
+    display: flex;
+    gap: 50px;
+}
+.anterior{
+    border: none;
+    background: none;
+    background-color: hotpink;
+    color: white;
+    padding: 15px 15px;
+    font-size: 30px;
+    font-family: "Kitty1";
+    border-radius: 10px;
+    box-shadow: 6px 10px 6px rgba(255, 72, 222, 0.714);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+.anterior:hover{
+    transform: scale(0.9);
+    box-shadow: 6px 10px 6px rgba(255, 72, 222, 0.44);
+    color: black;
+}
+.tercer{
+    width: 1500px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 2;
+}
+.centrado3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.centrado3 h2{
+    font-size: 55px;
+    font-family: "Kitty1";
+    color: lightcoral;
+}
+.descripcion{
+    padding: 20px;
+    width: 70%;
+    height: auto;
+    background-color: hotpink;
+    font-family: "Kitty";
+    border-radius: 10px;
+}
+.descripcion h2{
+    font-size: 50px;
+    font-family: "Kitty";
+    color: black;
+}
+.descripcion h3{
+    font-size: 40px;
+}
+.detalles{
+    padding: 30px;
+    background-color: pink;
+    border-radius: 5px;
+}
+.detalles p{
+    font-size: 20px;
+}
+.cuarter{
+    width: 1500px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 2;
+}
+.centrado4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.carta{
+    padding: 20px;
+    background-color: rgba(255, 105, 180, 0.619);
+    border-radius: 10%;
+}
+.carta img{
+    width: 100px;
+}
+.centrado4 h2{
+    font-size: 60px;
+    font-family: "Kitty";
+}
+.quinter{
+    width: 1500px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 2;
+}
+.centrado5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.centrado5 h2{
+    font-size: 60px;
+    font-family: "Kitty1";
+}
+.sexting{
+    width: 1500px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 2;
+}
+.centrado6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.centrado6 h2{
+    font-size: 50px;
+    font-family: "Kitty1";
+    color: rgb(250, 130, 150);
+}
+.descr{
+    background-color: hotpink;
+    padding: 25px;
+    border-radius: 5px;
+}
+.descr p{
+    font-size: 30px;
+    font-family: "Kitty";
+    text-align: center;
+}
+.descr1{
+    background-color: fuchsia;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.descr1 p{
+    font-size: 20px;
+    font-family: "Kitty";
+}
+.deco{
+    border: none;
+    background: none;
+    background-color: hotpink;
+    color: white;
+    padding: 15px 15px;
+    font-size: 30px;
+    font-family: "Kitty1";
+    border-radius: 10px;
+    box-shadow: 6px 10px 6px rgba(255, 72, 222, 0.714);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+.deco:focus{
+    transform: scale(0.9);
+    box-shadow: 6px 10px 6px rgba(255, 72, 222, 0.44);
+    color: black;
+}
