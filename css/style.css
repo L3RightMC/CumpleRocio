@@ -135,6 +135,7 @@ main.visible{
     font-family: "Kitty1";
     font-size: 60px;
     color: deeppink;
+    text-align: center;
 }
 .primer img{
     width: 300px;
@@ -232,7 +233,6 @@ main.visible{
 .memo6{
     transform: rotate(-12deg);
 }
-
 .memo img{
     width: 260px;
     position: absolute;
@@ -366,14 +366,14 @@ main.visible{
     gap: 30px;
     z-index: 2;
 }
-.centrado6{
+.centrado7{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
 }
-.centrado6 h2{
+.centrado7 h2{
     font-size: 50px;
     font-family: "Kitty1";
     color: rgb(250, 130, 150);
@@ -414,4 +414,185 @@ main.visible{
     transform: scale(0.9);
     box-shadow: 6px 10px 6px rgba(255, 72, 222, 0.44);
     color: black;
+}
+@media (max-width: 768px) {
+    .primero{
+        font-size: 2rem;
+    }
+    .segundo{
+        font-size: 2rem;
+    }
+    .primer{
+        width: 100% !important;
+        height: auto !important;
+        gap: 10px;
+        padding: 2rem 1rem;
+    }
+    .primer h1{
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    .primer img{
+        width: 230px;
+    }
+    .primer h2{
+        font-size: 1.4rem;
+        max-width: 250px;
+        text-align: center;
+    }
+    .centrado1 p{
+        font-size: 1.2rem;
+    }
+
+    /* segundo div */
+    .segun{
+        width: 100% !important;
+        height: auto !important;
+        padding: 2rem 1rem;
+    }
+    .segun h2{
+        font-size: 1.7rem;
+        max-width: 300px;
+        text-align: center;
+    }
+    .imagenes{
+        gap: 0px;
+    }
+    .memo{
+        width: 120px;
+        height: 120px;
+    }
+    .memo img{
+        width: 100px;
+        left: 10px;
+    }
+    .siguiente, .anterior{
+        font-size: 1rem;
+        padding: 15px 10px !important;
+    }
+
+    /* tercer div */
+    .tercer{
+        width: 100% !important;
+        height: auto !important;
+        padding: 2rem 1rem;
+    }
+    .centrado3 h2{
+        font-size: 1.5rem;
+    }
+    .youtube{
+        width: 300px;
+        height: 150px;
+        border-radius: 5px;
+    }
+    .descripcion{
+        padding: 15px;
+        width: 90%;
+    }
+    .descripcion h2{
+        font-size: 1.4rem;
+    }
+    .descripcion h3{
+        font-size: 1.2rem;
+    }
+    .detalles{
+        padding: 15px;
+    }
+    .detalles p{
+        font-size: 1.1rem;
+    }
+
+    /* cuarto div */
+    .cuarter{
+        width: 100% !important;
+        height: auto !important;
+        padding: 2rem 1rem;
+    }
+    .centrado4 img{
+        width: 80px;
+    }
+    .centrado4 h2{
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    /* quinto div */
+    .quinter{
+        width: 100% !important;
+        height: auto !important;
+        padding: 2rem 1rem;
+    }
+    .centrado5{
+        gap: 20px;
+    }
+    .centrado5 h2{
+        font-size: 1.8rem;
+        max-width: 80%;
+        text-align: center;
+    }
+    .centrado5 img{
+        width: 250px;
+    }
+
+    /* sexto div - EL PROBLEMA */
+    .sexting {
+        width: 100% !important;
+        height: 100vh !important;
+        overflow-y: auto !important;
+        padding: 0 !important;
+    }
+    .centrado7 {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        min-height: 120vh;  /* ✅ Más altura para crear scroll */
+        padding: 4rem 1rem 4rem 1rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .centrado7 h2 {
+        font-family: "Kitty1";
+        color: hotpink;
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0;
+        padding: 30px;
+        max-width: 100%;
+        order: -1;
+    }
+    
+    .sexting .descr {
+        padding: 15px;
+        width: 100%;
+        background-color: hotpink;
+        border-radius: 5px;
+    }
+    
+    .sexting .descr p {
+        font-size: 0.85rem;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    
+    .sexting .descr1 {
+        padding: 15px;
+        width: 100%;
+        background-color: fuchsia;
+        border-radius: 5px;
+    }
+    
+    .sexting .descr1 p {
+        font-size: 0.85rem;
+        text-align: center;
+        line-height: 1.4;
+    }
+    
+    .sexting .deco {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+        margin: 1rem 0;
+        width: 100%;
+    }
 }
