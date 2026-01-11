@@ -415,6 +415,57 @@ main.visible{
     box-shadow: 6px 10px 6px rgba(255, 72, 222, 0.44);
     color: black;
 }
+@media (max-width: 1600px) {
+    .primer, .segun, .tercer, .cuarter, .quinter, .sexting{
+        width: 95%;
+        gap: 20px;
+        padding: 2rem;
+    }
+    .primer h1, .segun h2, .centrado3 h2, .centrado4 h2, .centrado5 h2, .centrado6 h2 {
+        font-size: 2.5rem;  
+    }
+    .memo{
+        width: 230px;
+        height: 250px;
+    }
+    .memo img{
+        width: 190px;
+    }
+    .imagenes{
+        gap: 20px;
+    }
+    .centrado3{
+        gap: 15px;
+    }
+    .youtube{
+        width: 400px;
+        height: 225px;
+    }
+    .centrado5{
+        gap: 15px;
+    }
+    .centrado5 img{
+        width: 450px;
+    }
+    .centrado7{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .centrado7 h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .descr p{
+        font-size: 1.15rem;
+    }
+    .deco{
+        font-size: 1.5rem;
+        padding: 15px 20px;
+    }
+}
 @media (max-width: 768px) {
     .primero{
         font-size: 2rem;
@@ -429,7 +480,7 @@ main.visible{
         padding: 2rem 1rem;
     }
     .primer h1{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         text-align: center;
     }
     .primer img{
@@ -443,8 +494,6 @@ main.visible{
     .centrado1 p{
         font-size: 1.2rem;
     }
-
-    /* segundo div */
     .segun{
         width: 100% !important;
         height: auto !important;
@@ -470,8 +519,6 @@ main.visible{
         font-size: 1rem;
         padding: 15px 10px !important;
     }
-
-    /* tercer div */
     .tercer{
         width: 100% !important;
         height: auto !important;
@@ -479,6 +526,7 @@ main.visible{
     }
     .centrado3 h2{
         font-size: 1.5rem;
+        text-align: center;
     }
     .youtube{
         width: 300px;
@@ -501,8 +549,6 @@ main.visible{
     .detalles p{
         font-size: 1.1rem;
     }
-
-    /* cuarto div */
     .cuarter{
         width: 100% !important;
         height: auto !important;
@@ -515,8 +561,6 @@ main.visible{
         font-size: 1.6rem;
         text-align: center;
     }
-
-    /* quinto div */
     .quinter{
         width: 100% !important;
         height: auto !important;
@@ -533,26 +577,24 @@ main.visible{
     .centrado5 img{
         width: 250px;
     }
-
-    /* sexto div - EL PROBLEMA */
-    .sexting {
+    .sexting{
         width: 100% !important;
         height: 100vh !important;
         overflow-y: auto !important;
         padding: 0 !important;
     }
-    .centrado7 {
+    .centrado7{
         width: 100%;
         max-width: 400px;
         height: auto;
-        min-height: 120vh;  /* ✅ Más altura para crear scroll */
+        min-height: 120vh;
         padding: 4rem 1rem 4rem 1rem;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
     }
-    .centrado7 h2 {
+    .centrado7 h2{
         font-family: "Kitty1";
         color: hotpink;
         font-size: 1.2rem;
@@ -562,34 +604,29 @@ main.visible{
         max-width: 100%;
         order: -1;
     }
-    
-    .sexting .descr {
+    .sexting .descr{
         padding: 15px;
         width: 100%;
         background-color: hotpink;
         border-radius: 5px;
     }
-    
     .sexting .descr p {
         font-size: 0.85rem;
         text-align: justify;
         line-height: 1.5;
     }
-    
-    .sexting .descr1 {
+    .sexting .descr1{
         padding: 15px;
         width: 100%;
         background-color: fuchsia;
         border-radius: 5px;
     }
-    
-    .sexting .descr1 p {
+    .sexting .descr1 p{
         font-size: 0.85rem;
         text-align: center;
         line-height: 1.4;
     }
-    
-    .sexting .deco {
+    .sexting .deco{
         font-size: 0.9rem;
         padding: 10px 15px;
         margin: 1rem 0;
